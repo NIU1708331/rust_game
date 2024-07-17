@@ -6,7 +6,12 @@ const SIZE: usize = 15;
 fn imprimir(matriu: [[i32; SIZE]; SIZE]) {
     println!("  01 02 03 04 05 06 07 08 09 10 11 12 13 14 15");
     for i in 0..SIZE {
-        print!("{}  ", i+1);
+        if i<9 {
+            print!("{}  ", i+1);
+        }
+        else {
+            print!("{} ", i+1);
+        }
         for j in 0..SIZE {
             match matriu[i][j] {
                 0 => print!("_  "),
