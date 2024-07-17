@@ -102,7 +102,7 @@ fn ia_play(matriu: [[i32; SIZE]; SIZE], x: &mut usize, y: &mut usize) {
                     valoracion[i][j] += 1000;
                 }
 
-                if count_consecutive(matriu, i, j, 2) >= 4 {
+                if count_consecutive(matriu, i, j, 2) >= 3 {
                     valoracion[i][j] += 10000;
                 }
             }
@@ -154,9 +154,10 @@ fn main() {
                 if inputs.len() != 2 {
                     continue;
                 }
-                
+
                 x = inputs[0] - 1;
                 y = inputs[1] - 1;
+
                 if matriu[x][y] == 0 {
                     break;
                 } else {
@@ -179,4 +180,5 @@ fn main() {
             player_actual = 1;
         }
     }
+    imprimir(matriu);
 }
