@@ -330,12 +330,6 @@ fn count_consecutive(matrix: [[i32; SIZE]; SIZE], x: usize, y: usize, num: i32) 
             }
         }
     }
-
-/*     println!("{} ,{} ,{} ,{}",count_x,count_y,count_xy,count_yx);
-    println!("{}",puntuacion); */
-    if num!=0 {
-        println!("{}, {}",count_xy,count_yx);
-    }
     
 
     return puntuacion;
@@ -362,13 +356,6 @@ fn ia_play(matriu: [[i32; SIZE]; SIZE], x: &mut usize, y: &mut usize) {
             }
         }
     }
-
-    for x in 0..SIZE  {
-        for y in 0..SIZE  {
-            print!("{} ",valoracion[x][y]);
-        }
-        println!();
-    } 
 
     let mut max_num = 0;
     let mut max_coords = Vec::new();
